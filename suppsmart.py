@@ -13,6 +13,11 @@ stop_words = stopwords.words('english')
 extraStop = ["mg", "erowid", "-PRON-", "june", 'i知']
 stop_words.extend(extraStop)
 
+import subprocess
+
+# Run the shell command to download the spaCy model
+subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
+
 
 try:
     import spacy
