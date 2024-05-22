@@ -8,6 +8,7 @@ pydantic
 typing_extensions==3.10
 
 
+click==7.1.2
 protobuf==3.16.0
 nltk==3.6.2
 altair==4.10
