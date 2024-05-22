@@ -41,8 +41,8 @@ st.write(f"pydantic version: {v}")
 v = version("spacy")
 st.write(f"spacy version: {v}")
 
-v = version("streamlit")
-st.write(f"streamlit version: {v}")
+v = version("protobuf")
+st.write(f"protobuf version: {v}")
 
 try:
     typing_extensions_version = version("typing_extensions")
