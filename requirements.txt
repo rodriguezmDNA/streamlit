@@ -130,7 +130,7 @@ tqdm
 traitlets
 typer
 typing-inspect==0.8.0
-typing_extensions==4.5.0
+typing_extensions==4.4.0
 tzlocal
 urllib3
 validators
@@ -141,4 +141,3 @@ webencodings==0.5.1
 widgetsnbextension
 wordcloud
 zipp
-
