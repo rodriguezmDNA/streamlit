@@ -1,6 +1,6 @@
 # from SuppSmartFunctions import * 
-
-#from upgrade_querySearch import *
+# from upgrade_querySearch import *
+import streamlit as st
 
 ############################################################
 ###### testing grounds
@@ -23,8 +23,25 @@ except Exception as e:
 #nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner']) 
 ############################################################
 
-import streamlit as st
 
+
+
+
+######
+import pydantic
+# Display the version in Streamlit
+from importlib.metadata import version, PackageNotFoundError
+
+try:
+    # Get the pydantic version
+    pydantic_version = version("pydantic")
+except PackageNotFoundError:
+    pydantic_version = "Pydantic is not installed"
+
+# Display the version in Streamlit
+st.write(f"Pydantic version: {pydantic_version}")
+
+######
 
 
 st.image("suppsmart_banner.jpg", use_column_width=True)
@@ -36,6 +53,9 @@ query = st.text_input('enter your query: \n (pro tip - a longer, more descriptiv
 	'I want something to help me sleep')
 topN = st.text_input('limit your search to top results', 3)
 topN = int(topN)
+
+
+
 
 st.write(topN*2)
 st.write(stop_words[-10:])
