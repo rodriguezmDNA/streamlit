@@ -1,5 +1,6 @@
 # from SuppSmartFunctions import * 
 
+from upgrade_querySearch import *
 import streamlit as st
 
 
@@ -11,7 +12,7 @@ st.markdown('\n\n')
 #st.markdown('\t enter your query:')
 query = st.text_input('enter your query: \n (pro tip - a longer, more descriptive query works best!',
 	'I want something to help me sleep')
-topN = st.text_input('limit your search to top results', 5)
+topN = st.text_input('limit your search to top results', 3)
 topN = int(topN)
 
 # supReq = False
