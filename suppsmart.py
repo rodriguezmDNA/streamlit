@@ -7,6 +7,7 @@ import sys
 ###### testing grounds
 import nltk
 nltk.download('stopwords')
+
 from nltk.corpus import stopwords
 import streamlit as st
 
@@ -17,10 +18,14 @@ stop_words.extend(extraStop)
 from importlib.metadata import version, PackageNotFoundError
 import spacy
 
-try:    
-    nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
-except Exception as e:
-    st.write(f"Error loading spaCy model: {e}")
+# try:    
+#     nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
+# except Exception as e:
+#     st.write(f"Error loading spaCy model: {e}")
+
+import en_core_web_sm
+nlp = en_core_web_sm.load()
+
 
 try:
 	# Get the pydantic version
