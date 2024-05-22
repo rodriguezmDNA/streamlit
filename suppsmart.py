@@ -2,6 +2,7 @@
 
 #from upgrade_querySearch import *
 
+############################################################
 ###### testing grounds
 import nltk
 nltk.download('stopwords')
@@ -11,7 +12,11 @@ import streamlit as st
 stop_words = stopwords.words('english')
 extraStop = ["mg", "erowid", "-PRON-", "june", 'i知']
 stop_words.extend(extraStop)
-######
+
+
+import spacy #Language model
+nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner']) 
+############################################################
 
 import streamlit as st
 
