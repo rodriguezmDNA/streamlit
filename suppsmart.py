@@ -42,11 +42,11 @@ v = version("spacy")
 st.write(f"spacy version: {v}")
 
 try:
-    typing_inspect_version = version("typing-inspect")
+    typing_extensions_version = version("typing_extensions")
 except PackageNotFoundError:
-    typing_inspect_version = "typing-inspect is not installed"
+    typing_extensions_version = "typing_extensions is not installed"
 
-st.write(f"typing-inspect version: {typing_inspect_version}")
+st.write(f"typing_extensions version: {typing_extensions_version}")
 
 ############################################################
 
