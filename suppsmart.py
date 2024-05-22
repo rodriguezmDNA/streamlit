@@ -1,6 +1,18 @@
 # from SuppSmartFunctions import * 
 
-from upgrade_querySearch import *
+#from upgrade_querySearch import *
+
+###### testing grounds
+import nltk
+nltk.download('stopwords')
+from nltk.corpus import stopwords
+import streamlit as st
+
+stop_words = stopwords.words('english')
+extraStop = ["mg", "erowid", "-PRON-", "june", 'i知']
+stop_words.extend(extraStop)
+######
+
 import streamlit as st
 
 
@@ -14,6 +26,9 @@ query = st.text_input('enter your query: \n (pro tip - a longer, more descriptiv
 	'I want something to help me sleep')
 topN = st.text_input('limit your search to top results', 3)
 topN = int(topN)
+
+st.write(topN*2)
+st.write(stop_words[-10:])
 
 # supReq = False
 
