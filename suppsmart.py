@@ -16,6 +16,12 @@ stop_words.extend(extraStop)
 
 import spacy #Language model
 
+try:
+    import spacy
+    nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
+except Exception as e:
+    st.write(f"Error loading spaCy model: {e}")
+
 ############################################################
 
 
