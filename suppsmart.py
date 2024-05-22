@@ -13,6 +13,9 @@ stop_words = stopwords.words('english')
 extraStop = ["mg", "erowid", "-PRON-", "june", 'i知']
 stop_words.extend(extraStop)
 
+
+import spacy #Language model
+
 ############################################################
 
 
