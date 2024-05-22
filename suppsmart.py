@@ -13,26 +13,14 @@ stop_words = stopwords.words('english')
 extraStop = ["mg", "erowid", "-PRON-", "june", 'i知']
 stop_words.extend(extraStop)
 
-import subprocess
-
-# Function to download the spaCy model if not already present
-def download_spacy_model():
-    try:
-        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
-    except subprocess.CalledProcessError as e:
-        st.error(f"Failed to download spaCy model: {e}")
-        return False
-    return True
-
-# Check if spaCy model is already downloaded
 try:
+    import spacy
     nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
-except OSError:
-    if download_spacy_model():
-        nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
-    else:
-        st.stop()  # Stop the script execution if the model download fails
-
+except Exception as e:
+    st.write(f"Error loading spaCy model: {e}")
+    
+#import spacy #Language model
+#nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner']) 
 ############################################################
 
 import streamlit as st
