@@ -13,44 +13,6 @@ stop_words = stopwords.words('english')
 extraStop = ["mg", "erowid", "-PRON-", "june", 'i知']
 stop_words.extend(extraStop)
 
-try:
-    import spacy
-    nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
-except Exception as e:
-    st.write(f"Error loading spaCy model: {e}")
-    
-#import spacy #Language model
-#nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner']) 
-############################################################
-
-
-
-
-
-############################################################
-
-
-import pydantic
-
-# Display the version in Streamlit
-from importlib.metadata import version, PackageNotFoundError
-
-#st.write(f"spacy version: {version("spacy")}")
-v = version("pydantic")
-st.write(f"pydantic version: {v}")
-v = version("spacy")
-st.write(f"spacy version: {v}")
-
-v = version("streamlit")
-st.write(f"streamlit=={v}")
-
-try:
-    typing_extensions_version = version("typing_extensions")
-except PackageNotFoundError:
-    typing_extensions_version = "typing_extensions is not installed"
-
-st.write(f"typing_extensions version: {typing_extensions_version}")
-
 ############################################################
 
 
