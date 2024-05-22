@@ -13,14 +13,21 @@ stop_words = stopwords.words('english')
 extraStop = ["mg", "erowid", "-PRON-", "june", 'i知']
 stop_words.extend(extraStop)
 
+from importlib.metadata import version, PackageNotFoundError
+import spacy
 
-import spacy #Language model
-
-try:
-    import spacy
+try:    
     nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
 except Exception as e:
     st.write(f"Error loading spaCy model: {e}")
+
+try:
+	# Get the pydantic version
+	_version = version("spacy")
+except PackageNotFoundError:
+	_version = "spacy is not installed"
+
+st.write(f"spacy version: {_version}")    
 
 ############################################################
 
