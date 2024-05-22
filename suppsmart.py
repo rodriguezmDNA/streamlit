@@ -14,6 +14,12 @@ extraStop = ["mg", "erowid", "-PRON-", "june", 'i知']
 stop_words.extend(extraStop)
 
 
+try:
+    import spacy
+    nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
+except Exception as e:
+    st.write(f"Error loading spaCy model: {e}")
+    
 import spacy #Language model
 nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner']) 
 ############################################################
