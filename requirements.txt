@@ -30,7 +30,6 @@ dataclasses
 debugpy
 decorator
 defusedxml
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0-py3-none-any.whl
 entrypoints
 exceptiongroup==1.2.1
 funcy==1.16
@@ -111,7 +110,9 @@ six
 sklearn==0.0
 smart-open
 smmap
-spacy==3.1.0
+#spacy==3.1.0
+spacy>=2.2.0,<3.0.0
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz#egg=en_core_web_sm
 spacy-legacy
 srsly
 statsmodels
