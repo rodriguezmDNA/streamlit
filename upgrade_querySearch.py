@@ -36,7 +36,6 @@ from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 ### Dviz
 import pyLDAvis
 import pyLDAvis.gensim 
-import matplotlib.pyplot as plt
 
 ##### Define unwanted/stop words
 
