@@ -1,6 +1,7 @@
 # from SuppSmartFunctions import * 
 # from upgrade_querySearch import *
 import streamlit as st
+import sys
 
 ############################################################
 ###### testing grounds
@@ -27,7 +28,9 @@ try:
 except PackageNotFoundError:
 	_version = "spacy is not installed"
 
-st.write(f"spacy version: {_version}")    
+st.write(f"spacy version: {_version}")
+
+st.write(f"Python version: {sys.version}")
 
 ############################################################
 
