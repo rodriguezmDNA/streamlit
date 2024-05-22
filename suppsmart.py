@@ -41,6 +41,13 @@ st.write(f"pydantic version: {v}")
 v = version("spacy")
 st.write(f"spacy version: {v}")
 
+try:
+    typing_inspect_version = version("typing-inspect")
+except PackageNotFoundError:
+    typing_inspect_version = "typing-inspect is not installed"
+
+st.write(f"typing-inspect version: {typing_inspect_version}")
+
 ############################################################
 
 
