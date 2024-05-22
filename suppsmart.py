@@ -27,21 +27,21 @@ except Exception as e:
 
 
 
-######
+############################################################
+
+
 import pydantic
+
 # Display the version in Streamlit
 from importlib.metadata import version, PackageNotFoundError
 
-try:
-    # Get the pydantic version
-    pydantic_version = version("pydantic")
-except PackageNotFoundError:
-    pydantic_version = "Pydantic is not installed"
+#st.write(f"spacy version: {version("spacy")}")
+v = version("pydantic")
+st.write(f"pydantic version: {v}")
+v = version("spacy")
+st.write(f"spacy version: {v}")
 
-# Display the version in Streamlit
-st.write(f"Pydantic version: {pydantic_version}")
-
-######
+############################################################
 
 
 st.image("suppsmart_banner.jpg", use_column_width=True)
