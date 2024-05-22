@@ -16,6 +16,9 @@ English multi-task CNN trained on OntoNotes. Assigns context-specific token vect
 POS tags, dependency parse and named entities
 """
 
+import nltk
+nltk.download('stopwords')
+
 ### For stop words
 from wordcloud import STOPWORDS
 from nltk.corpus import stopwords

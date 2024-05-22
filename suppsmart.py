@@ -6,7 +6,7 @@ import streamlit as st
 
 
 st.image("suppsmart_banner.jpg", use_column_width=True)
-st.subheader('getting smart about dietary supplements')
+st.subheader('Getting smart about dietary supplements')
 
 st.markdown('\n\n')
 #st.markdown('\t enter your query:')
