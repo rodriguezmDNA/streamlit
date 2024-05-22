@@ -4,7 +4,7 @@ import pickle #save/load
 import re # regular expressions
 import pandas as pd #data frames
 import numpy as np #math
-from scipy import sparse #sparse matrices
+#from scipy import sparse #sparse matrices
 import seaborn as sns
 import matplotlib.pyplot as plt
 
