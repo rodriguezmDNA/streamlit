@@ -41,8 +41,8 @@ st.write(f"pydantic version: {v}")
 v = version("spacy")
 st.write(f"spacy version: {v}")
 
-v = version("click")
-st.write(f"click=={v}")
+v = version("pydantic")
+st.write(f"pydantic=={v}")
 
 try:
     typing_extensions_version = version("typing_extensions")
