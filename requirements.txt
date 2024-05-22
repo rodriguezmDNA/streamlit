@@ -15,7 +15,7 @@ streamlit==1.23.0
 # click==7.1.2
 # protobuf==3.20.3
 # pydantic==1.8.2
-# spacy==3.1.2
+spacy==3.1.2
 # typing_extensions==3.10
 nltk==3.6.2
 
